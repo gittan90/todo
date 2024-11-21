@@ -81,6 +81,10 @@ input {
   color: #888;
 }
 
+.remove-button {
+  background-color: #fa7ae2;
+}
+
 button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
