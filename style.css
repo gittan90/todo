@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'CustomFont'; 
+  src: url('fonts/Daily\ Handwritten.otf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
@@ -15,11 +21,13 @@
 }
 
 h1 {
-  font-size: 0.5rem;
-  font-weight: 300;
+  font-family: "CustomFont";
+  font-size: 3.2em;
+  font-weight: 500;
   margin: 0;
   text-align: center;
   color: fuchsia;
+  transform: scale(1.5);
 }
 
 a {
@@ -39,23 +47,22 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-ul,
-ol {
-  list-style-type: none;
-  margin: 0;
+ul, ol {
   padding: 0;
+  margin: 0;
 }
 
 li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 0px;
+  gap: 5px !important;
+  margin-bottom: 2px !important;
+  height: 30px;
+}
+
+li p {
+  line-height: 1 !important; 
+  margin: 0;
 }
 
 input {
@@ -74,10 +81,6 @@ input {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-}
-
-#app h1 {
-  margin-bottom: 0.5rem;
 }
 
 button {
