@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -12,6 +12,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  font-size: 0.5rem;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+  color: fuchsia;
 }
 
 a {
@@ -36,21 +44,25 @@ h1 {
   line-height: 1.1;
 }
 
-ul, ol {
-  list-style-type: none; /* Removes bullets or numbers */
+ul,
+ol {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 li {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0px;
 }
 
 input {
   border: 2px solid #f183e8;
   border-radius: 5px;
   font-size: 23px;
+  padding: 0.5rem;
 }
 
 #app {
@@ -58,6 +70,36 @@ input {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#app h1 {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border: none;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .logo {
@@ -66,9 +108,11 @@ input {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
@@ -83,26 +127,17 @@ input {
 
 .remove-button {
   background-color: #fa7ae2;
-}
-
-button {
-  border-radius: 8px;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  color: white;
   border: none;
-
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 8px;
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
